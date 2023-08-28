@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deuses do CDZ</title>
+    <link rel="stylesheet" href="css/style - Copia.css">
+</head>
+<body>
+    <p>Digite a patentiaçao do deus:
+        <input type="text" placeholder="Inforne um texto" id="valor">
+        <button onclick="MudaDesenho()">Revelaçao!</button><p>
+
+    <h1></h1>
+    <img src="img2/deuses.jpg">
+
+
+    <script>
+        function MudaDesenho(){
+            const texto = document.querySelector("h1");
+            const imagem = document.querySelector("img");
+            const valor = document.querySelector('#valor').value;
+            
+            if(valor=="mares"){
+                texto.innerHTML = "Poseidon";
+                imagem.setAttribute("src","img2/mares.png");
+                imagem.setAttribute("width","300px");
+            }
+            
+            else if(valor=="sono"){
+                texto.innerHTML = "Hypnos";
+                imagem.setAttribute("src","img2/sono.png");
+                imagem.setAttribute("width","300px");
+            }
+            else if(valor=="morte"){
+                texto.innerHTML = "Thanatos";
+                imagem.setAttribute("src","img2/morte.png");
+                imagem.setAttribute("width","300px");
+            }
+            else if(valor=="sol"){
+                texto.innerHTML = "Apolo";
+                imagem.setAttribute("src","img2/apolo_12.jpg");
+                imagem.setAttribute("width","300px");
+            }
+            else if(valor=="sabedoria"){
+                texto.innerHTML = "Atena";
+                imagem.setAttribute("src","img2/atena3-0.webp");
+                imagem.setAttribute("width","300px");
+            }
+            else if(valor=="inferno"){
+                texto.innerHTML = "Hades";
+                imagem.setAttribute("src","img2/hades.jpg");
+                imagem.setAttribute("width","300px");
+            }
+            else{
+                texto.innerHTML = "Deus não encontrado... =(";
+                imagem.setAttribute("src","img/x.webp");
+                imagem.setAttribute("width","250px");
+            }
+        }
+    </script>
+</body>
+</html>
